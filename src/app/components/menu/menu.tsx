@@ -1,5 +1,4 @@
 import style from "./menu.module.css"
-import Image from "next/image";
 import Link from "next/link";
 
 const Menu = () => {
