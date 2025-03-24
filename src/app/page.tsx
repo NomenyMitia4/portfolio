@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft, faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export default function Home()
 {
@@ -15,8 +16,8 @@ export default function Home()
         <div className={style.container}>
           <div className={style.menu}>
             <div className={style.item}>Home</div>
-            <div className={style.item}>About</div>
-            <div className={style.item}>Services</div>
+            <div className={style.item}><Link href={"/about"}>About</Link></div>
+            <div className={style.item}><Link href={"/achievement"}>Achievement</Link></div>
             <div className={style.item}>Contact</div>
           </div>
           <div className={style.burger}>
@@ -24,10 +25,10 @@ export default function Home()
           </div>
           <h2>Hi, I am</h2>
           <h1>Nomeny Mitia</h1>
-          <p>FullStack Developer</p>
+          <p>Fullstack Developer</p>
           <div className={style.links}>
             <div className={style.btn}>
-              <button className={style.btn_link}><a href="http://">DOWNLOAD CV</a></button>
+              <button className={style.btn_link}><a href="http://">RESUME</a></button>
               <div className={style.social_media}>
                 <p>Join me here</p>
                 <div className={style.social_media_icons}>
