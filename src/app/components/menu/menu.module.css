@@ -1,0 +1,30 @@
+.header
+{
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    top: 5%;
+}
+
+.items
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 5px;
+    font-size: 1.2rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) 
+{
+    .items
+    {
+        flex-wrap: wrap;
+        font-size: 1.7em;
+    }
+}

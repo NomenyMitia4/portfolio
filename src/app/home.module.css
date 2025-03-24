@@ -1,11 +1,9 @@
-
-
 .header
 {
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(rgba(136, 34, 34, 0.69), rgba(72, 36, 94, 0.679));
+    background: linear-gradient(rgba(136, 34, 34, 0.69), rgba(72, 36, 94, 0.679)), url("/background/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -80,27 +78,6 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     letter-spacing: 2px;
     font-size: 1.2em;
-}
-
-.menu
-{
-    position: absolute;
-    top: 3em;
-    right: 22em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
-
-.menu .item
-{
-    font-family: 'Montserrat', sans-serif;
-    padding: 5px;
-    font-size: 1.2rem;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #ffffff;
-    cursor: pointer;
 }
 
 .social_media
@@ -298,6 +275,10 @@
         gap: 15px;
     }
 
+    .btn
+    {
+        text-align: center;
+    }
     .service
     {
         width: 70%;
@@ -316,40 +297,24 @@
 {
     .container h1
     {
-        font-size: 2.6rem;
+        font-size: 3.4rem;
         margin-top: 20px;
         text-align: center;
     }
 
     .container h2
     {
-        font-size: 1.8rem;
+        font-size: 3.4rem;
     }
 
     .container p
     {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
     }
 
     .btn
     {
         text-align: center;
-    }
-
-    .burger
-    {
-        right: 2em;
-    }
-
-    .menu
-    {
-        gap: 5px;
-        right: 5em;
-    }
-
-    .menu .item
-    {
-        font-size: 1rem;
     }
 
     .social_media

@@ -2,27 +2,19 @@ import style from "./home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft, faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
+import Menu from "./components/menu/menu";
 
 export default function Home()
 {
   return(
     <>
       <div className={style.header}></div>
+      <div className={style.menu}>
+        <Menu/>
+      </div>
       <div className={style.home}>
-
         {/* Container starts here */}
         <div className={style.container}>
-          <div className={style.menu}>
-            <div className={style.item}>Home</div>
-            <div className={style.item}><Link href={"/about"}>About</Link></div>
-            <div className={style.item}><Link href={"/achievement"}>Achievement</Link></div>
-            <div className={style.item}>Contact</div>
-          </div>
-          <div className={style.burger}>
-            <FontAwesomeIcon icon={faBars} size="2x" width={30} height={30}/>
-          </div>
           <h2>Hi, I am</h2>
           <h1>Nomeny Mitia</h1>
           <p>Fullstack Developer</p>
