@@ -1,11 +1,26 @@
+"use client";
+
 import style from "./home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft, faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Menu from "./components/menu/menu";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home()
 {
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
+  
   return(
     <>
       <div className={style.header}></div>
@@ -47,21 +62,21 @@ export default function Home()
               <div className={style.list_services}>
                 <div className={style.service}>
                   <div className={style.service_logo}>
-                    <img src={"/image/python.jpg"} alt="python logo" width={150} height={150}/>
+                    <img src={"/image/python.jpg"} alt="python icon" width={150} height={150}/>
                   </div>
                   <p className={style.title}>Backend Developer</p>
                   <p className={style.description}>In a fast-paced tech world, a skilled Python Backend Developer ensures your applications are built on a strong, scalable foundation. Whether launching a new product, scaling up, or optimizing performance, a Python developer delivers precision and expertise to help you succeed.</p>
                 </div>
                 <div className={style.service}>
                   <div className={style.service_logo}>
-                    <img src={"/image/next.jpg"} alt="python logo" width={150} height={150}/>
+                    <Image className={style.image_wrapper} fetchPriority={"auto"} src={"/image/next.jpg"} alt={"python logo"} width={150} height={150}/>
                   </div>
                   <p className={style.title}>Frontend Developer</p>
                   <p className={style.description}>In a world where user experience is everything, a Next.js Developer can transform your web applications into fast, dynamic, and SEO-friendly platforms. Built on React, Next.js is the ultimate framework for modern web development, offering server-side rendering, static site generation, and seamless scalability.</p>
                 </div>
                 <div className={style.service}>
                   <div className={style.service_logo}>
-                    <img src={"/image/ai.jpg"} alt="python logo" width={150} height={150}/>
+                    <Image fetchPriority={"auto"} src={"/image/ai.jpg"} alt={"python logo"} width={150} height={150}/>
                   </div>
                   <p className={style.title}>AI implementation</p>
                   <p className={style.description}>The future belongs to those who embrace AI today. By integrating AI into your business, you can unlock new opportunities, solve complex problems, and create smarter, more efficient systems. Don’t get left behind—harness the power of AI to drive innovation and growth.</p>
